@@ -28,9 +28,9 @@ function playRound(playerSelection, computerSelection) {
   computerSelection = computerPlay();
 
   if (
-    (playerSelection === "rock" && computerSelection === "scissors") ||
-    (playerSelection === "paper" && computerSelection === "rock") ||
-    (playerSelection === "scissors" && computerSelection === "paper")
+    (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") ||
+    (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") ||
+    (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper")
   ) {
     return `You win! ${playerSelection} beats ${computerSelection}!`;
   } else if (playerSelection === computerSelection) {
@@ -40,4 +40,35 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-console.log(playRound());
+// Five rounds
+
+function game() {
+
+  let playerPoint = 0;
+  let computerPoint = 0;
+  
+  for (let i = 0; i < 5; i++) {
+    let roundResult = playRound();
+    if (roundResult.includes('You win')) {
+      playerPoint += 1;
+      console.log(roundResult);
+      console.log(`Your Score: ${playerPoint}`, `Enemy Score: ${computerPoint}`);
+    } else if (roundResult.includes('You lose')) {
+      computerPoint += 1;
+      console.log(roundResult);
+      console.log(`Your Score: ${playerPoint}`, `Enemy Score: ${computerPoint}`);
+    } else {
+      console.log(roundResult);
+      console.log(`Your Score: ${playerPoint}`, `Enemy Score: ${computerPoint}`);
+    }
+  }
+  if (playerPoint > computerPoint) {
+    return 'Winner!!!'
+  } else if (playerPoint === computerPoint) {
+    return 'Draw >:('
+  } else {
+    return 'You lose!!'
+  }
+}
+
+console.log(game());
