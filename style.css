@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  background:linear-gradient(90deg, rgba(23, 23, 1, 1) 0%, rgba(0, 255, 17, 1) 71%, rgba(0, 255, 17, 1) 100%);  
+  padding: 10px 50px 10px 10px;
+}
+
+.navbar ul li {
+  background-color: rgba(0, 255, 17, 1);
+}
+
+
+svg {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 255, 17, 1);
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: VT323;
+  color: #00FF41;
+  margin: 30px 0;
+}
+
+.title-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.challenger {
+  font-size: 50px;
+  color: #008F11;
+}
+
+.player-score, .computer-score {
+  font-size: 200px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+#rock, #paper, #scissors {
+  font-size: 30px;
+  background-color: #003B00;
+  padding: 10px;
+  color: white;
+}
+
+.computer-screen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: VT323;
+  font-size: 40px;
+  background-color: #000;
+  color: #00FF41;
+}
+
+.veredict-container {
+  text-align: center;
+}
+
+.replay-btn {
+  font-family: VT323;
+  font-size: 20px;
+  background-color: #000;
+  color: #00FF41;
+  padding: 5px;
+}
